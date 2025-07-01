@@ -1,7 +1,4 @@
-<script setup lang="ts"></script>
-
-<template>
-  <div>test</div>
-</template>
-
-<style scoped></style>
+<script setup lang="ts">
+const router = useRouter()
+router.replace('/bubbleSort')
+</script>
