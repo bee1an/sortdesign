@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { ItemType } from './SortContainer.vue'
-import SortContainer from './SortContainer.vue'
+import type { ItemType } from './BaseSort.vue'
+import BaseSort from './BaseSort.vue'
 
 const { config: _c } = defineProps<{
   config?: {
@@ -50,13 +50,13 @@ async function run(arr: Ref<ItemType[]>) {
 }
 
 const vm = getCurrentInstance()
-function changeRef(instance: InstanceType<typeof SortContainer>) {
+function changeRef(instance: InstanceType<typeof BaseSort>) {
   vm!.exposed = instance
 }
 
-defineExpose<Pick<InstanceType<typeof SortContainer>, 'rerun'>>()
+defineExpose<Pick<InstanceType<typeof BaseSort>, 'rerun'>>()
 </script>
 
 <template>
-  <SortContainer :ref="changeRef as any" :config="config" @run-sort="run" @befor-run="reject?.()" />
+  <BaseSort :ref="changeRef as any" :config="config" @run-sort="run" @befor-run="reject?.()" />
 </template>

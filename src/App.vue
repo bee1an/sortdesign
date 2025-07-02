@@ -16,7 +16,7 @@ const sortRouters = computed(() => {
   <footer>
     <div h-1px bg="gray-200 dark:gray-700" />
 
-    <div p="x-4 y-10" m-auto flex w-screen-md justify-center>
+    <div p="x-4 y-10" m-auto flex gap-3 w-screen-md justify-center>
       <div v-for="route in sortRouters" :key="route.path">
         <RouterLink
           :to="route.path" text-blue-500

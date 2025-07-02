@@ -8,11 +8,14 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    BaseSort: typeof import('./src/components/BaseSort.vue')['default']
     BubbleSort: typeof import('./src/components/BubbleSort.vue')['default']
+    QuickSort: typeof import('./src/components/QuickSort.vue')['default']
     Rect: typeof import('./src/components/Rect.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SortContainer: typeof import('./src/components/SortContainer.vue')['default']
+    SortWrapper: typeof import('./src/components/SortWrapper.vue')['default']
     TheFooter: typeof import('./src/components/TheFooter.vue')['default']
     TheInput: typeof import('./src/components/TheInput.vue')['default']
   }
