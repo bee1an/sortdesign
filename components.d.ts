@@ -12,6 +12,7 @@ declare module 'vue' {
     Rect: typeof import('./src/components/Rect.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SortContainer: typeof import('./src/components/SortContainer.vue')['default']
     TheFooter: typeof import('./src/components/TheFooter.vue')['default']
     TheInput: typeof import('./src/components/TheInput.vue')['default']
   }
