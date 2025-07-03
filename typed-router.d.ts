@@ -22,6 +22,7 @@ declare module 'vue-router/auto-routes' {
     '/[...all]': RouteRecordInfo<'/[...all]', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     '/bubbleSort/': RouteRecordInfo<'/bubbleSort/', '/bubbleSort', Record<never, never>, Record<never, never>>,
     '/heapSort/': RouteRecordInfo<'/heapSort/', '/heapSort', Record<never, never>, Record<never, never>>,
+    '/insertionSort/': RouteRecordInfo<'/insertionSort/', '/insertionSort', Record<never, never>, Record<never, never>>,
     '/quickSort/': RouteRecordInfo<'/quickSort/', '/quickSort', Record<never, never>, Record<never, never>>,
   }
 }
