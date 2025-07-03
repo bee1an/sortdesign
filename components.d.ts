@@ -10,6 +10,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     BaseSort: typeof import('./src/components/BaseSort.vue')['default']
     BubbleSort: typeof import('./src/components/BubbleSort.vue')['default']
+    HeapSort: typeof import('./src/components/HeapSort.vue')['default']
     QuickSort: typeof import('./src/components/QuickSort.vue')['default']
     Rect: typeof import('./src/components/Rect.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

@@ -37,9 +37,12 @@ function init() {
 
   activeIdx.value = -1
 
-  setTimeout(() => {
+  setTimeout(async () => {
     running = true
-    onRunSort(arrWrapped)
+    try {
+      await onRunSort(arrWrapped)
+    }
+    catch {}
   }, 500)
 }
 watch(() => config, () => {

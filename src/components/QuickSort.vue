@@ -32,10 +32,8 @@ async function run(arr: Ref<ItemType[]>) {
     flagItem.active = true
 
     for (let i = start; i <= end; i++) {
-      const err = Symbol('')
-      const returnable = await wait(config.value.waitTime).catch(() => err)
-      if (returnable === err)
-        return
+      await wait(config.value.waitTime)
+
       if (flagItem.item > items[i].item) {
         const lesser = items.splice(i, 1)
         items.splice(start, 0, ...lesser)
@@ -44,11 +42,11 @@ async function run(arr: Ref<ItemType[]>) {
     }
 
     items[flagIndex].sorted = true
-    classifyItems(items, start, flagIndex - 1)
-    classifyItems(items, flagIndex + 1, end)
+    await classifyItems(items, start, flagIndex - 1)
+    await classifyItems(items, flagIndex + 1, end)
   }
 
-  classifyItems(arr.value, 0, arr.value.length - 1)
+  await classifyItems(arr.value, 0, arr.value.length - 1)
 }
 
 const vm = getCurrentInstance()

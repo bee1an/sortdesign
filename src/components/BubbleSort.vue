@@ -26,10 +26,7 @@ async function run(arr: Ref<ItemType[]>) {
     for (let i = 0; i < n - 1; i++) {
       arr.value[i].active = true
 
-      const err = Symbol('')
-      const returnable = await wait(config.value.waitTime).catch(() => err)
-      if (returnable === err)
-        return
+      await wait(config.value.waitTime)
 
       if (arr.value[i].item > arr.value[i + 1].item) {
         ;[arr.value[i], arr.value[i + 1]] = [arr.value[i + 1], arr.value[i]]
