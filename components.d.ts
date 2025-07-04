@@ -12,6 +12,7 @@ declare module 'vue' {
     BubbleSort: typeof import('./src/components/BubbleSort.vue')['default']
     HeapSort: typeof import('./src/components/HeapSort.vue')['default']
     InsertionSort: typeof import('./src/components/InsertionSort.vue')['default']
+    MergeSort: typeof import('./src/components/MergeSort.vue')['default']
     QuickSort: typeof import('./src/components/QuickSort.vue')['default']
     Rect: typeof import('./src/components/Rect.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
