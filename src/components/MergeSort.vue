@@ -18,7 +18,7 @@ const { config, wait, reject, changeRef } = useSortInit(_c)
  */
 
 async function run(arr: Ref<ItemType[]>) {
-  splitAndMerge(0, arr.value.length - 1)
+  await splitAndMerge(0, arr.value.length - 1)
 
   async function splitAndMerge(start: number, end: number): Promise<[number, number]> {
     if (start === end) {
