@@ -20,7 +20,7 @@ function wait(ms: number) {
 
 async function run(arr: Ref<ItemType[]>) {
   // 建堆, 从非叶子节点开始建堆
-  for (let i = Math.floor(arr.value.length / 2) - 1; i--;) {
+  for (let i = Math.floor(arr.value.length / 2); i--;) {
     await heapify(i, arr.value.length)
   }
 
