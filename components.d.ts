@@ -18,6 +18,7 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SelectionSort: typeof import('./src/components/SelectionSort.vue')['default']
+    ShellSort: typeof import('./src/components/ShellSort.vue')['default']
     SortWrapper: typeof import('./src/components/SortWrapper.vue')['default']
     TheFooter: typeof import('./src/components/TheFooter.vue')['default']
   }
