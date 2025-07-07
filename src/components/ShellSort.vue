@@ -17,6 +17,9 @@ async function run(arr: Ref<ItemType[]>) {
   // 增量减少
   while (increment > 0) {
     let n = 0
+    if (increment === 1) {
+      arr.value[0].sorted = true
+    }
 
     // 依次排序
     while (n < increment) {
@@ -33,7 +36,14 @@ async function run(arr: Ref<ItemType[]>) {
 
         // 插入排序
         while (1) {
+          arr.value[j].active = true
+          arr.value[i].active = true
           await wait(config.value.waitTime)
+          if (increment === 1) {
+            arr.value[i].sorted = true
+          }
+          arr.value[j].active = false
+          arr.value[i].active = false
           if (arr.value[j].item > arr.value[i].item) {
             arr.value.splice(j, 0, ...arr.value.splice(i, 1))
             break

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ItemType } from './SortContainer.vue'
+import type { ItemType } from './BaseSort.vue'
 
 const { num, max, item } = defineProps<{
   num: number
