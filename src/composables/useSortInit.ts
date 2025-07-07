@@ -1,10 +1,10 @@
 import type BaseSort from '../components/BaseSort.vue'
 
-export function useSortInit(_c?: {
+export function useSortInit(props: { config?: {
   waitTime?: number
   length?: number
-}) {
-  const config = computed(() => Object.assign({ length: 40, waitTime: 200 }, _c))
+} }) {
+  const config = computed(() => Object.assign({ length: 40, waitTime: 200 }, props.config))
 
   let promise: Promise<void>
   let resolve: () => void

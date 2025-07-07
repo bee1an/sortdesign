@@ -2,14 +2,14 @@
 import type { ItemType } from './BaseSort.vue'
 import BaseSort from './BaseSort.vue'
 
-const { config: _c } = defineProps<{
+const props = defineProps<{
   config?: {
     waitTime?: number
     length?: number
   }
 }>()
 
-const { config, wait, reject, changeRef } = useSortInit(_c)
+const { config, wait, reject, changeRef } = useSortInit(props)
 
 /**
  * 这里为了直接在原数组上操作才这样写
