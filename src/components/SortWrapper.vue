@@ -3,7 +3,16 @@ defineEmits<{
   rerun: () => void
 }>()
 const waitTime = defineModel()
-const length = defineModel('length')
+const length = defineModel<number>('length')
+
+watch(length, (newValue) => {
+  if (newValue! > 100) {
+    length.value = 100
+  }
+  else if (newValue! < 2) {
+    length.value = 2
+  }
+})
 </script>
 
 <template>
@@ -22,7 +31,12 @@ const length = defineModel('length')
           </div>
 
           <div flex gap-1 items-center>
-            <span>元素数量</span><input v-model.lazy="length" step="1" type="range" min="2" max="100">{{ length }}
+            <span>元素数量</span><input v-model.lazy="length" step="1" type="range" min="2" max="100"><input
+              v-model.lazy="length" border="1px solid gray rd-sm"
+              type="number"
+              w-15
+              min="2" max="100"
+            >
           </div>
 
           <button
