@@ -7,7 +7,7 @@ definePage({
 
 const quickSort = useTemplateRef('quickSort')
 
-const length = useStorage('length', 20)
+const length = useStorage('length', 20, undefined, { flush: 'post' })
 
 const waitTime = useStorage('waitTime', 100)
 </script>

@@ -31,7 +31,7 @@ watch(length, (newValue) => {
           </div>
 
           <div flex gap-1 items-center>
-            <span>元素数量</span><input v-model.lazy="length" step="1" type="range" min="2" max="100"><input
+            <span>元素数量</span><input v-model.lazy.number="length" step="1" type="range" min="2" max="100"><input
               v-model.lazy="length" border="1px solid gray rd-sm"
               type="number"
               w-15
