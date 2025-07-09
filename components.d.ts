@@ -14,6 +14,7 @@ declare module 'vue' {
     InsertionSort: typeof import('./src/components/InsertionSort.vue')['default']
     MergeSort: typeof import('./src/components/MergeSort.vue')['default']
     QuickSort: typeof import('./src/components/QuickSort.vue')['default']
+    RadixSort: typeof import('./src/components/RadixSort.vue')['default']
     Rect: typeof import('./src/components/Rect.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
